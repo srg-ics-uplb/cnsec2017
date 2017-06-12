@@ -35,3 +35,22 @@ rm .password
 service apache2 restart
 
 
+#web app pen test tools
+apt-get -y install libssl-dev libffi-dev libsqlite3-dev libxslt1-dev libyaml-dev libxml2-dev
+apt-get install -y python2.7 python-pip
+
+pip install pyClamd==0.3.15 PyGithub==1.21.0 GitPython==0.3.2.RC1 pybloomfiltermmap==0.3.14 esmre==0.3.1 phply==0.9.1 nltk==3.0.1 chardet==2.1.1 tblib==0.2.0 pdfminer==20140328 futures==2.1.5 pyOpenSSL==0.15.1 ndg-httpsclient==0.3.3 pyasn1==0.1.9 lxml==3.4.4 scapy-real==2.2.0-dev guess-language==0.2 cluster==1.1.1b3 msgpack-python==0.4.4 python-ntlm==1.0.1 halberd==0.2.4 darts.util.lru==0.5 Jinja2==2.7.3 vulndb==0.0.19 markdown==2.6.1 psutil==2.2.1 termcolor==1.1.0 mitmproxy==0.13 ruamel.ordereddict==0.4.8 Flask==0.10.1 PyYAML==3.12 tldextract==1.7.2
+
+update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+cd /home/ubuntu
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+git clone --depth 1 https://github.com/andresriancho/w3af.git w3af-dev
+
+chown -R ubuntu.ubuntu sqlmap-dev
+chown -R ubuntu.ubuntu w3af-dev
+
+
+
+
+
+
