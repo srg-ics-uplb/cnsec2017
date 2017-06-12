@@ -4,7 +4,7 @@
 #add repo for old PHP versions no longer supported in 16.04
 sudo add-apt-repository ppa:ondrej/php
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 
 
 #set the password for mysql server for non-interactive install
