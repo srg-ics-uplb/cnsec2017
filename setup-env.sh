@@ -21,6 +21,7 @@ apt-get install -y build-essential nasm
 #install and configure dvwa
 wget https://github.com/ethicalhack3r/DVWA/archive/v1.9.tar.gz -O /tmp/v1.9.tar.gz
 cd /var/www/html
+rm index.html
 tar xzvf /tmp/v1.9.tar.gz
 cp -r DVWA-1.9/* .
 rm -fr DVWA-1.9
