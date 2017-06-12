@@ -26,7 +26,9 @@ mv DVWA-1.9 dvwa
 sed -i 's/allow_url_include = Off/allow_url_include = On/g' /etc/php/5.6/apache2/php.ini
 chmod -R 777 /var/www/html/dvwa/hackable/uploads/
 chmod -R 777 /var/www/html/dvwa/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
-mysql -u root -p < dvwa-1.9-cnsec2017.sql
+echo "p@ssw0rd" > .password
+mysql --user=root --password="$(< .password)" dvwa < /vagrant/dvwa-1.9-cnsec2017.sql
+rm .password
 service apache2 restart
 
 
