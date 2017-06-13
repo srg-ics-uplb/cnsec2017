@@ -16,7 +16,7 @@ apt-get install -y apache2 mysql-server php5.6 php5.6-mysql php5.6-gd php5.6-cli
 
 
 #install dev tools
-apt-get install -y build-essential nasm
+apt-get install -y build-essential nasm gdb
 
 #install and configure dvwa
 wget https://github.com/ethicalhack3r/DVWA/archive/v1.9.tar.gz -O /tmp/v1.9.tar.gz
