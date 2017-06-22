@@ -27,7 +27,7 @@ rm -fr php-sample-master
 sed -i 's/allow_url_include = Off/allow_url_include = On/g' /etc/php/5.6/apache2/php.ini
 echo "root" > .password
 mysql --user=root --password="$(< .password)" -e "CREATE DATABASE cnsec;"
-mysql --user=root --password="$(< .password)" dvwa < database.sql
+mysql --user=root --password="$(< .password)" cnsec < database.sql
 rm .password
 service apache2 restart
 
